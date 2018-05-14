@@ -1,0 +1,1 @@
+default[:openshiftmaster][:subdomain] = 'osapps.corp.internalroot.com'
