@@ -32,3 +32,6 @@ bash 'deply' do
     ansible-playbook playbooks/deploy_cluster.yml
   EOH
 end
+
+# Need to add hostpath pv
+# oc create -f hostpath.yml
