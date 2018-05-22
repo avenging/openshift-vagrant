@@ -8,9 +8,9 @@ Vagrant.configure(2) do |config|
 		config.proxy.no_proxy = "localhost,127.0.0.1,10.0.0.0/8,os-master"
   end
   config.vm.define "os-master" do |os_master|
-	  os_master.vm.hostname = "os-master"
+	  #os_master.vm.hostname = "os-master"
 	  os_master.vm.box = "centos/7"
-	  os_master.vm.network "private_network", ip: "192.168.33.10"
+		#os_master.vm.network "private_network", ip: "192.168.33.10"
 		os_master.vm.provision "chef_zero" do |chef|
 			chef.synced_folder_type = "rsync"
 		  chef.cookbooks_path = "cookbooks"

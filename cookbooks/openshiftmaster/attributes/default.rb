@@ -1,1 +1,1 @@
-default[:openshiftmaster][:subdomain] = 'osapps.corp.internalroot.com'
+default[:openshiftmaster][:subdomain] = "osapps.#{node[:ipaddress]}.nip.io"
