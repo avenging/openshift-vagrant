@@ -6,7 +6,6 @@ nodes
 etcd
 
 [OSEv3:vars]
-openshift_master_upgrade_post_hook=<%= Chef::Config['file_cache_path'] %>/post_master.yml
 openshift_deployment_type=origin
 openshift_release=3.9
 openshift_master_default_subdomain=<%= node[:openshiftmaster][:subdomain] %>
@@ -17,8 +16,8 @@ osm_host_subnet_length=9
 openshift_disable_check=disk_availability,memory_availability
 openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/origin/master/htpasswd'}]
 openshift_master_htpasswd_users={'admin': '$apr1$XZ7vJmnu$5FkFEKbpcVwRg3uIrMlwb.'}
-#openshift_http_proxy=http://euuktelsprx01.europe.odcorp.net:3128
-#openshift_https_proxy=http://euuktelsprx01.europe.odcorp.net:3128
+#openshift_http_proxy=
+#openshift_https_proxy=
 #openshift_no_proxy='localhost,127.0.0.1,10.0.0.0/8,os-master'
 
 [masters]
