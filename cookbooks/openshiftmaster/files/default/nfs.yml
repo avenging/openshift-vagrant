@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nfs-pv0002
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+  - ReadWriteOnce
+  nfs:
+    path: /opt/nfs2/pv0001
+    server: 192.168.121.192
+  persistentVolumeRelaimPolicy: Recycle

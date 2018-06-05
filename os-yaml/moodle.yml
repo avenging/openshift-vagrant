@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: DeploymentConfig
+metadata:
+  name: moodle-frontend
+spec:
+  replicas: 2
+  selector:
+    name: moodle-frontend
+  template: 
+    metadata:
+      labels:
+        name: moodle-frontend
+    spec:
+      containers:
+        - name: nginx
+          image: openshift/nginx:latest
+          ports:
+          - containerPort: 80
+            protocol: TCP
+  strategy: 
+    type: Rolling
